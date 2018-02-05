@@ -7,18 +7,19 @@ import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 
 public abstract class BaseTest {
+    protected WebDriver driver;
 
     @Before
     public void setUpt() {
         String browserName = "firefox";
-        WebDriver driver = WebDriverFactory.createWebDriverInstance(browserName);
+        driver = WebDriverFactory.createWebDriverInstance(browserName);
         WebDriverManager.setWebDriver(driver);
 
     }
 
     @After
     public void tearDown() {
-        WebDriver driver = WebDriverManager.getDriver();
+        driver = WebDriverManager.getDriver();
         if (driver != null) {
             driver.quit();
         }
