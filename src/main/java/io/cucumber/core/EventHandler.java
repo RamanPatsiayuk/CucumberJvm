@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.WebDriverEventListener;
 
+//http://automation-remarks.com/selenium-logs/
 public class EventHandler implements WebDriverEventListener {
     private static final Logger LOG = LogManager.getLogger(EventHandler.class);
 
